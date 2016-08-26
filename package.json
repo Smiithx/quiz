@@ -19,6 +19,7 @@
     "ejs": "~2.4.1",
     "express": "~4.13.4",
     "express-partials": "^0.3.0",
+    "method-override": "^2.3.6",
     "morgan": "~1.7.0",
     "pg": "^6.1.0",
     "sequelize": "3.24.0",

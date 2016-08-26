@@ -6,6 +6,11 @@
                 <%= Quizes[i].pregunta %>
             </a>
         </td>
+        <td>
+            <a href="quizes/<%= Quizes[i].id %>/edit">
+               <button>editar</button> 
+            </a>
+        </td>
     </tr>
     <% } %>
 </table>

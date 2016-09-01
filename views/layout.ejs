@@ -20,7 +20,11 @@
                <%if(!session.user){%>
                    <span class="right"><a href="/login">Login</a></span>
                <%}else{%>
-                   <span class="right"><a href="/logout?_method=delete">Logout</a></span>
+                   <span class="right"><%=session.user.username%> 
+                        <form method="post" action="/logout?_method=delete">
+                            <button type="submit">Logout</button>
+                        </form>
+                    </span>
                <%}%>
                 <h2>Quiz<span>: el juego de las preguntas</span></h2>
             </header>

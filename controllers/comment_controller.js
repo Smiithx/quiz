@@ -49,11 +49,11 @@ exports.create = function(req,res){
 exports.publish = function(req,res){
     req.comment.publicado = true;
     req.comment.save({
-        filds: ["publicado"]
+        fields: ["publicado"]
     }).then(function(){
         res.redirect("/quizes/"+ req.params.quizId);
-    }).catch(function(error){
-       next(error) 
+    }).catch(function(err){
+       next(err) 
     });
 };
     

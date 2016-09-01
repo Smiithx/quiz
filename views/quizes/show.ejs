@@ -9,11 +9,11 @@
     </a>
 </p>
 <p><strong>Comentarios:</strong></p>
-<%for(index in quiz.Comments){%>
-    <%if(quiz.Comments[index].publicado || session.user){%>
-        <p>- <%= quiz.Comments[index].texto%> 
-            <%if(session.user && !quiz.Comments[index].publicado){%>
-                <form action="/quizes/<%quiz.id%>/comments/<%quiz.Comments[index].id%>/publish?_method=put" method="post">    
+<%for(index in quiz.Comment){%>
+    <%if(quiz.Comment[index].publicado || session.user){%>
+        <p>- <%= quiz.Comment[index].texto%> 
+            <%if(session.user && !quiz.Comment[index].publicado){%>
+                <form action="/quizes/<%=quiz.id%>/comments/<%=quiz.Comment[index].id%>/publish?_method=put" method="post">    
                     <button type="submit">Publicar</button>
                 </form>
             <%}%>

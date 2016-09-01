@@ -13,7 +13,7 @@
     <%if(quiz.Comment[index].publicado || session.user){%>
         <p>- <%= quiz.Comment[index].texto%> 
             <%if(session.user && !quiz.Comment[index].publicado){%>
-                <form action="/quizes/<%quiz.id%>/comments/<%quiz.Comment[index].id%>/publish?_method=put" method="post">    
+                <form action="/quizes/<%=quiz.id%>/comments/<%=quiz.Comment[index].id%>/publish?_method=put" method="post">    
                     <button type="submit">Publicar</button>
                 </form>
             <%}%>

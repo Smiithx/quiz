@@ -47,7 +47,6 @@ exports.create = function(req,res){
 
 // PUT /quizes/:quizId/comments/:commentId/publish
 exports.publish = function(req,res){
-    console.log("<--Entro-->\n");
     req.comment.publicado = true;
     req.comment.save({
         fields: ["publicado"]
